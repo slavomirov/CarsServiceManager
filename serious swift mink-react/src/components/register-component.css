@@ -1,0 +1,258 @@
+.register-component-container1 {
+  width: 100%;
+  height: 900px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+ 
+.register-component-sign-up-image {
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  bottom: 0px;
+  height: 100%;
+  position: absolute;
+}
+ 
+.register-component-container2 {
+  top: 0px;
+  flex: 0 0 auto;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  border: 2px dashed rgba(120, 120, 120, 0.4);
+  bottom: 0px;
+  height: 100%;
+  display: flex;
+  z-index: 10;
+  position: absolute;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: rgba(0,0,0,0.4);
+}
+ 
+.register-component-max-width {
+  gap: var(--dl-layout-space-unit);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index: 100;
+  overflow: hidden;
+  align-items: center;
+  flex-shrink: 0;
+  justify-content: center;
+}
+ 
+.register-component-form1 {
+  gap: var(--dl-layout-space-twounits);
+  width: auto;
+  display: flex;
+  align-items: center;
+  border-radius: var(--dl-layout-radius-radius4);
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: var(--dl-color-theme-neutral-light);
+}
+ 
+.register-component-title-root {
+  gap: var(--dl-layout-space-halfunit);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+ 
+.register-component-text10 {
+  text-align: center;
+}
+ 
+.register-component-container3 {
+  gap: var(--dl-layout-space-unit);
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+ 
+.register-component-button1 {
+  gap: var(--dl-layout-space-halfunit);
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  border-color: var(--dl-color-theme-primary1);
+  border-style: solid;
+  border-width: 1px;
+  justify-content: center;
+}
+ 
+.register-component-icon1 {
+  width: 24px;
+  height: 24px;
+}
+ 
+.register-component-button2 {
+  gap: var(--dl-layout-space-halfunit);
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  border-color: var(--dl-color-theme-primary1);
+  border-style: solid;
+  border-width: 1px;
+  justify-content: center;
+}
+ 
+.register-component-icon3 {
+  width: 24px;
+  height: 24px;
+}
+ 
+.register-component-divider1 {
+  gap: var(--dl-layout-space-oneandhalfunits);
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  justify-content: center;
+}
+ 
+.register-component-divider2 {
+  flex: 1;
+  width: var(--dl-layout-size-medium);
+  height: 1px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: var(--dl-color-theme-primary1);
+}
+ 
+.register-component-divider3 {
+  flex: 1;
+  width: var(--dl-layout-size-medium);
+  height: 1px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: var(--dl-color-theme-primary1);
+}
+ 
+.register-component-text15 {
+  text-align: center;
+}
+ 
+.register-component-form2 {
+  gap: var(--dl-layout-space-unit);
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+ 
+.register-component-email {
+  gap: var(--dl-layout-space-halfunit);
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.register-component-textinput {
+  width: 100%;
+}
+ 
+.register-component-container4 {
+  gap: var(--dl-layout-space-halfunit);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+ 
+.register-component-terms-agree {
+  gap: var(--dl-layout-space-halfunit);
+  display: flex;
+  padding: var(--dl-layout-space-halfunit);
+  align-items: center;
+}
+ 
+.register-component-newsletter {
+  gap: var(--dl-layout-space-halfunit);
+  display: flex;
+  padding: var(--dl-layout-space-halfunit);
+  align-items: center;
+}
+ 
+.register-component-button3 {
+  width: 100%;
+}
+ 
+.register-component-text19 {
+  text-align: center;
+}
+ 
+.register-component-text20 {
+  display: inline-block;
+}
+ 
+.register-component-text21 {
+  display: inline-block;
+}
+ 
+.register-component-text22 {
+  display: inline-block;
+}
+ 
+.register-component-text23 {
+  display: inline-block;
+}
+ 
+.register-component-text24 {
+  display: inline-block;
+}
+ 
+@media(max-width: 991px) {
+  .register-component-container1 {
+    gap: var(--dl-layout-space-twounits);
+    height: auto;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .register-component-max-width {
+    width: 100%;
+    padding: var(--dl-layout-space-fourunits);
+  }
+}
+ 
+@media(max-width: 479px) {
+  .register-component-max-width {
+    padding: var(--dl-layout-space-oneandhalfunits);
+  }
+  .register-component-form1 {
+    padding-left: var(--dl-layout-space-oneandhalfunits);
+    padding-right: var(--dl-layout-space-oneandhalfunits);
+  }
+  .register-component-text10 {
+    text-align: center;
+  }
+  .register-component-text11 {
+    text-align: center;
+  }
+  .register-component-button1 {
+    width: 100%;
+  }
+  .register-component-button2 {
+    width: 100%;
+  }
+  .register-component-button3 {
+    width: 100%;
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\spart\\Desktop\\project\\CarsServiceManager\\CarsServiceManagerApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7F049B36-B8CD-4C2A-883E-5EF80CD1CB00}|CarsServiceManagerApi\\CarsServiceManagerApi.csproj|c:\\users\\spart\\desktop\\project\\carsservicemanager\\carsservicemanagerapi\\carsservicemanagerapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F049B36-B8CD-4C2A-883E-5EF80CD1CB00}|CarsServiceManagerApi\\CarsServiceManagerApi.csproj|solutionrelative:carsservicemanagerapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F049B36-B8CD-4C2A-883E-5EF80CD1CB00}|CarsServiceManagerApi\\CarsServiceManagerApi.csproj|c:\\users\\spart\\desktop\\project\\carsservicemanager\\carsservicemanagerapi\\carsservicemanagerapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F049B36-B8CD-4C2A-883E-5EF80CD1CB00}|CarsServiceManagerApi\\CarsServiceManagerApi.csproj|solutionrelative:carsservicemanagerapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F049B36-B8CD-4C2A-883E-5EF80CD1CB00}|CarsServiceManagerApi\\CarsServiceManagerApi.csproj|c:\\users\\spart\\desktop\\project\\carsservicemanager\\carsservicemanagerapi\\carsservicemanagerapi\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F049B36-B8CD-4C2A-883E-5EF80CD1CB00}|CarsServiceManagerApi\\CarsServiceManagerApi.csproj|solutionrelative:carsservicemanagerapi\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F049B36-B8CD-4C2A-883E-5EF80CD1CB00}|CarsServiceManagerApi\\CarsServiceManagerApi.csproj|c:\\users\\spart\\desktop\\project\\carsservicemanager\\carsservicemanagerapi\\carsservicemanagerapi\\data\\validators\\userregisterdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F049B36-B8CD-4C2A-883E-5EF80CD1CB00}|CarsServiceManagerApi\\CarsServiceManagerApi.csproj|solutionrelative:carsservicemanagerapi\\data\\validators\\userregisterdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F049B36-B8CD-4C2A-883E-5EF80CD1CB00}|CarsServiceManagerApi\\CarsServiceManagerApi.csproj|c:\\users\\spart\\desktop\\project\\carsservicemanager\\carsservicemanagerapi\\carsservicemanagerapi\\data\\accessors\\interfaces\\iuseraccessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F049B36-B8CD-4C2A-883E-5EF80CD1CB00}|CarsServiceManagerApi\\CarsServiceManagerApi.csproj|solutionrelative:carsservicemanagerapi\\data\\accessors\\interfaces\\iuseraccessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F049B36-B8CD-4C2A-883E-5EF80CD1CB00}|CarsServiceManagerApi\\CarsServiceManagerApi.csproj|c:\\users\\spart\\desktop\\project\\carsservicemanager\\carsservicemanagerapi\\carsservicemanagerapi\\data\\accessors\\useraccessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F049B36-B8CD-4C2A-883E-5EF80CD1CB00}|CarsServiceManagerApi\\CarsServiceManagerApi.csproj|solutionrelative:carsservicemanagerapi\\data\\accessors\\useraccessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\spart\\Desktop\\project\\CarsServiceManager\\CarsServiceManagerApi\\CarsServiceManagerApi\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "CarsServiceManagerApi\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\spart\\Desktop\\project\\CarsServiceManager\\CarsServiceManagerApi\\CarsServiceManagerApi\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "CarsServiceManagerApi\\Controllers\\UsersController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T16:32:03.715Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IUserAccessor.cs",
+              "DocumentMoniker": "C:\\Users\\spart\\Desktop\\project\\CarsServiceManager\\CarsServiceManagerApi\\CarsServiceManagerApi\\Data\\Accessors\\Interfaces\\IUserAccessor.cs",
+              "RelativeDocumentMoniker": "CarsServiceManagerApi\\Data\\Accessors\\Interfaces\\IUserAccessor.cs",
+              "ToolTip": "C:\\Users\\spart\\Desktop\\project\\CarsServiceManager\\CarsServiceManagerApi\\CarsServiceManagerApi\\Data\\Accessors\\Interfaces\\IUserAccessor.cs",
+              "RelativeToolTip": "CarsServiceManagerApi\\Data\\Accessors\\Interfaces\\IUserAccessor.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T14:55:52.29Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserAccessor.cs",
+              "DocumentMoniker": "C:\\Users\\spart\\Desktop\\project\\CarsServiceManager\\CarsServiceManagerApi\\CarsServiceManagerApi\\Data\\Accessors\\UserAccessor.cs",
+              "RelativeDocumentMoniker": "CarsServiceManagerApi\\Data\\Accessors\\UserAccessor.cs",
+              "ToolTip": "C:\\Users\\spart\\Desktop\\project\\CarsServiceManager\\CarsServiceManagerApi\\CarsServiceManagerApi\\Data\\Accessors\\UserAccessor.cs",
+              "RelativeToolTip": "CarsServiceManagerApi\\Data\\Accessors\\UserAccessor.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T14:55:50.146Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\spart\\Desktop\\project\\CarsServiceManager\\CarsServiceManagerApi\\CarsServiceManagerApi\\Program.cs",
+              "RelativeDocumentMoniker": "CarsServiceManagerApi\\Program.cs",
+              "ToolTip": "C:\\Users\\spart\\Desktop\\project\\CarsServiceManager\\CarsServiceManagerApi\\CarsServiceManagerApi\\Program.cs",
+              "RelativeToolTip": "CarsServiceManagerApi\\Program.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACgAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T14:11:23.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserRegisterDTOValidator.cs",
+              "DocumentMoniker": "C:\\Users\\spart\\Desktop\\project\\CarsServiceManager\\CarsServiceManagerApi\\CarsServiceManagerApi\\Data\\Validators\\UserRegisterDTOValidator.cs",
+              "RelativeDocumentMoniker": "CarsServiceManagerApi\\Data\\Validators\\UserRegisterDTOValidator.cs",
+              "ToolTip": "C:\\Users\\spart\\Desktop\\project\\CarsServiceManager\\CarsServiceManagerApi\\CarsServiceManagerApi\\Data\\Validators\\UserRegisterDTOValidator.cs",
+              "RelativeToolTip": "CarsServiceManagerApi\\Data\\Validators\\UserRegisterDTOValidator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T14:07:27.981Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\spart\\Desktop\\project\\CarsServiceManager\\CarsServiceManagerApi\\CarsServiceManagerApi\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "CarsServiceManagerApi\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\spart\\Desktop\\project\\CarsServiceManager\\CarsServiceManagerApi\\CarsServiceManagerApi\\Services\\UserService.cs",
+              "RelativeToolTip": "CarsServiceManagerApi\\Services\\UserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBgAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T14:01:40.445Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

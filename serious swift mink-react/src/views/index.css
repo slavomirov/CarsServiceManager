@@ -1,0 +1,27 @@
+.index-container {
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+ 
+.index-text1 {
+  display: inline-block;
+}
+ 
+.index-text2 {
+  display: inline-block;
+}
+ 
+.index-text3 {
+  display: inline-block;
+}
+ 
+.index-text4 {
+  display: inline-block;
+}
+ 
+.index-text5 {
+  display: inline-block;
+}

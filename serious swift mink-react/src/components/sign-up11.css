@@ -1,0 +1,426 @@
+.sign-up11-container10 {
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+ 
+.sign-up11-max-width {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+ 
+.sign-up11-form-root {
+  gap: var(--dl-layout-space-unit);
+  width: 60%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: row;
+  justify-content: center;
+}
+ 
+.sign-up11-form1 {
+  gap: var(--dl-layout-space-twounits);
+  width: auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+ 
+.sign-up11-title-root {
+  gap: var(--dl-layout-space-halfunit);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.sign-up11-form2 {
+  gap: var(--dl-layout-space-unit);
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+ 
+.sign-up11-service-name {
+  gap: var(--dl-layout-space-halfunit);
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.sign-up11-textinput1 {
+  width: 100%;
+  border-color: var(--dl-color-theme-primary1);
+  background-color: transparent;
+}
+ 
+.sign-up11-email {
+  gap: var(--dl-layout-space-halfunit);
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.sign-up11-textinput2 {
+  width: 100%;
+  border-color: var(--dl-color-theme-primary1);
+  background-color: transparent;
+}
+ 
+.sign-up11-username {
+  gap: var(--dl-layout-space-halfunit);
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.sign-up11-textinput3 {
+  width: 100%;
+  border-color: var(--dl-color-theme-primary1);
+  background-color: transparent;
+}
+ 
+.sign-up11-password {
+  gap: var(--dl-layout-space-halfunit);
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.sign-up11-textfield1 {
+  gap: 4px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.sign-up11-container11 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+ 
+.sign-up11-hide-password1 {
+  gap: var(--dl-layout-space-halfunit);
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-shrink: 1;
+  justify-content: center;
+}
+ 
+.sign-up11-icon1 {
+  fill: var(--dl-color-theme-neutral-dark);
+  width: 24px;
+  height: 24px;
+}
+ 
+.sign-up11-textinput4 {
+  width: 100%;
+  border-color: var(--dl-color-theme-primary1);
+  background-color: transparent;
+}
+ 
+.sign-up11-confirm-password {
+  gap: var(--dl-layout-space-halfunit);
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.sign-up11-textfield2 {
+  gap: 4px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.sign-up11-container12 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+ 
+.sign-up11-hide-password2 {
+  gap: var(--dl-layout-space-halfunit);
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-shrink: 1;
+  justify-content: center;
+}
+ 
+.sign-up11-icon3 {
+  fill: var(--dl-color-theme-neutral-dark);
+  width: 24px;
+  height: 24px;
+}
+ 
+.sign-up11-textinput5 {
+  width: 100%;
+  border-color: var(--dl-color-theme-primary1);
+  background-color: transparent;
+}
+ 
+.sign-up11-pass-requirements {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+ 
+.sign-up11-pass-conditions1 {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.sign-up11-bulletpoint1 {
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  padding-top: var(--dl-layout-space-halfunit);
+  padding-left: 8px 8px 8px 0;
+  padding-right: 8px 8px 8px 0;
+  padding-bottom: var(--dl-layout-space-halfunit);
+  justify-content: center;
+}
+ 
+.sign-up11-container13 {
+  flex: 0 0 auto;
+  width: 6px;
+  height: 6px;
+  display: flex;
+  align-items: flex-start;
+  border-radius: var(--dl-layout-radius-round);
+  flex-direction: column;
+  background-color: var(--dl-color-theme-neutral-dark);
+}
+ 
+.sign-up11-text18 {
+  font-size: 14px;
+}
+ 
+.sign-up11-bulletpoint2 {
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  padding-top: var(--dl-layout-space-halfunit);
+  padding-left: 8px 8px 8px 0;
+  padding-right: 8px 8px 8px 0;
+  padding-bottom: var(--dl-layout-space-halfunit);
+  justify-content: center;
+}
+ 
+.sign-up11-container14 {
+  flex: 0 0 auto;
+  width: 6px;
+  height: 6px;
+  display: flex;
+  align-items: flex-start;
+  border-radius: var(--dl-layout-radius-round);
+  flex-direction: column;
+  background-color: var(--dl-color-theme-neutral-dark);
+}
+ 
+.sign-up11-text19 {
+  font-size: 14px;
+}
+ 
+.sign-up11-pass-conditions2 {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.sign-up11-bulletpoint3 {
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  padding-top: var(--dl-layout-space-halfunit);
+  padding-left: 8px 8px 8px 0;
+  padding-right: 8px 8px 8px 0;
+  padding-bottom: var(--dl-layout-space-halfunit);
+  justify-content: center;
+}
+ 
+.sign-up11-container15 {
+  flex: 0 0 auto;
+  width: 6px;
+  height: 6px;
+  display: flex;
+  align-items: flex-start;
+  border-radius: var(--dl-layout-radius-round);
+  flex-direction: column;
+  background-color: var(--dl-color-theme-neutral-dark);
+}
+ 
+.sign-up11-text20 {
+  font-size: 14px;
+}
+ 
+.sign-up11-bulletpoint4 {
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  padding-top: var(--dl-layout-space-halfunit);
+  padding-left: 8px 8px 8px 0;
+  padding-right: 8px 8px 8px 0;
+  padding-bottom: var(--dl-layout-space-halfunit);
+  justify-content: center;
+}
+ 
+.sign-up11-container16 {
+  flex: 0 0 auto;
+  width: 6px;
+  height: 6px;
+  display: flex;
+  align-items: flex-start;
+  border-radius: var(--dl-layout-radius-round);
+  flex-direction: column;
+  background-color: var(--dl-color-theme-neutral-dark);
+}
+ 
+.sign-up11-text21 {
+  font-size: 14px;
+}
+ 
+.sign-up11-pass-conditions3 {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.sign-up11-bulletpoint5 {
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  padding-top: var(--dl-layout-space-halfunit);
+  padding-left: 8px 8px 8px 0;
+  padding-right: 8px 8px 8px 0;
+  padding-bottom: var(--dl-layout-space-halfunit);
+  justify-content: center;
+}
+ 
+.sign-up11-container17 {
+  flex: 0 0 auto;
+  width: 6px;
+  height: 6px;
+  display: flex;
+  align-items: flex-start;
+  border-radius: var(--dl-layout-radius-round);
+  flex-direction: column;
+  background-color: var(--dl-color-theme-neutral-dark);
+}
+ 
+.sign-up11-text22 {
+  font-size: 14px;
+}
+ 
+.sign-up11-container18 {
+  gap: var(--dl-layout-space-halfunit);
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+ 
+.sign-up11-terms-agree {
+  gap: var(--dl-layout-space-halfunit);
+  display: flex;
+  padding: var(--dl-layout-space-halfunit);
+  align-items: flex-start;
+}
+ 
+.sign-up11-checkbox {
+  align-self: center;
+}
+ 
+.sign-up11-text25 {
+  text-align: center;
+}
+ 
+.sign-up11-have-an-account-login {
+  gap: var(--dl-layout-space-halfunit);
+  display: flex;
+  align-items: flex-start;
+}
+ 
+.sign-up11-container19 {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-self: center;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+ 
+.sign-up11-sign-up-image {
+  width: 100%;
+  height: 100%;
+}
+ 
+.sign-up11-text27 {
+  display: inline-block;
+}
+ 
+.sign-up11-text28 {
+  display: inline-block;
+}
+ 
+.sign-up11-text29 {
+  display: inline-block;
+}
+ 
+@media(max-width: 991px) {
+  .sign-up11-form-root {
+    width: 100%;
+    padding: var(--dl-layout-space-fourunits);
+  }
+  .sign-up11-container19 {
+    display: none;
+  }
+}
+ 
+@media(max-width: 479px) {
+  .sign-up11-form-root {
+    padding: var(--dl-layout-space-oneandhalfunits);
+  }
+  .sign-up11-pass-requirements {
+    flex-direction: column;
+  }
+  .sign-up11-button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,426 @@
+.register-email-component-container10 {
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+ 
+.register-email-component-max-width {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+ 
+.register-email-component-form-root {
+  gap: var(--dl-layout-space-unit);
+  width: 60%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: row;
+  justify-content: center;
+}
+ 
+.register-email-component-form1 {
+  gap: var(--dl-layout-space-twounits);
+  width: auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+ 
+.register-email-component-title-root {
+  gap: var(--dl-layout-space-halfunit);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.register-email-component-form2 {
+  gap: var(--dl-layout-space-unit);
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+ 
+.register-email-component-service-name {
+  gap: var(--dl-layout-space-halfunit);
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.register-email-component-textinput1 {
+  width: 100%;
+  border-color: var(--dl-color-theme-primary1);
+  background-color: transparent;
+}
+ 
+.register-email-component-email {
+  gap: var(--dl-layout-space-halfunit);
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.register-email-component-textinput2 {
+  width: 100%;
+  border-color: var(--dl-color-theme-primary1);
+  background-color: transparent;
+}
+ 
+.register-email-component-username {
+  gap: var(--dl-layout-space-halfunit);
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.register-email-component-textinput3 {
+  width: 100%;
+  border-color: var(--dl-color-theme-primary1);
+  background-color: transparent;
+}
+ 
+.register-email-component-password {
+  gap: var(--dl-layout-space-halfunit);
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.register-email-component-textfield1 {
+  gap: 4px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.register-email-component-container11 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+ 
+.register-email-component-hide-password1 {
+  gap: var(--dl-layout-space-halfunit);
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-shrink: 1;
+  justify-content: center;
+}
+ 
+.register-email-component-icon1 {
+  fill: var(--dl-color-theme-neutral-dark);
+  width: 24px;
+  height: 24px;
+}
+ 
+.register-email-component-textinput4 {
+  width: 100%;
+  border-color: var(--dl-color-theme-primary1);
+  background-color: transparent;
+}
+ 
+.register-email-component-confirm-password {
+  gap: var(--dl-layout-space-halfunit);
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.register-email-component-textfield2 {
+  gap: 4px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.register-email-component-container12 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+ 
+.register-email-component-hide-password2 {
+  gap: var(--dl-layout-space-halfunit);
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-shrink: 1;
+  justify-content: center;
+}
+ 
+.register-email-component-icon3 {
+  fill: var(--dl-color-theme-neutral-dark);
+  width: 24px;
+  height: 24px;
+}
+ 
+.register-email-component-textinput5 {
+  width: 100%;
+  border-color: var(--dl-color-theme-primary1);
+  background-color: transparent;
+}
+ 
+.register-email-component-pass-requirements {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+ 
+.register-email-component-pass-conditions1 {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.register-email-component-bulletpoint1 {
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  padding-top: var(--dl-layout-space-halfunit);
+  padding-left: 8px 8px 8px 0;
+  padding-right: 8px 8px 8px 0;
+  padding-bottom: var(--dl-layout-space-halfunit);
+  justify-content: center;
+}
+ 
+.register-email-component-container13 {
+  flex: 0 0 auto;
+  width: 6px;
+  height: 6px;
+  display: flex;
+  align-items: flex-start;
+  border-radius: var(--dl-layout-radius-round);
+  flex-direction: column;
+  background-color: var(--dl-color-theme-neutral-dark);
+}
+ 
+.register-email-component-text18 {
+  font-size: 14px;
+}
+ 
+.register-email-component-bulletpoint2 {
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  padding-top: var(--dl-layout-space-halfunit);
+  padding-left: 8px 8px 8px 0;
+  padding-right: 8px 8px 8px 0;
+  padding-bottom: var(--dl-layout-space-halfunit);
+  justify-content: center;
+}
+ 
+.register-email-component-container14 {
+  flex: 0 0 auto;
+  width: 6px;
+  height: 6px;
+  display: flex;
+  align-items: flex-start;
+  border-radius: var(--dl-layout-radius-round);
+  flex-direction: column;
+  background-color: var(--dl-color-theme-neutral-dark);
+}
+ 
+.register-email-component-text19 {
+  font-size: 14px;
+}
+ 
+.register-email-component-pass-conditions2 {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.register-email-component-bulletpoint3 {
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  padding-top: var(--dl-layout-space-halfunit);
+  padding-left: 8px 8px 8px 0;
+  padding-right: 8px 8px 8px 0;
+  padding-bottom: var(--dl-layout-space-halfunit);
+  justify-content: center;
+}
+ 
+.register-email-component-container15 {
+  flex: 0 0 auto;
+  width: 6px;
+  height: 6px;
+  display: flex;
+  align-items: flex-start;
+  border-radius: var(--dl-layout-radius-round);
+  flex-direction: column;
+  background-color: var(--dl-color-theme-neutral-dark);
+}
+ 
+.register-email-component-text20 {
+  font-size: 14px;
+}
+ 
+.register-email-component-bulletpoint4 {
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  padding-top: var(--dl-layout-space-halfunit);
+  padding-left: 8px 8px 8px 0;
+  padding-right: 8px 8px 8px 0;
+  padding-bottom: var(--dl-layout-space-halfunit);
+  justify-content: center;
+}
+ 
+.register-email-component-container16 {
+  flex: 0 0 auto;
+  width: 6px;
+  height: 6px;
+  display: flex;
+  align-items: flex-start;
+  border-radius: var(--dl-layout-radius-round);
+  flex-direction: column;
+  background-color: var(--dl-color-theme-neutral-dark);
+}
+ 
+.register-email-component-text21 {
+  font-size: 14px;
+}
+ 
+.register-email-component-pass-conditions3 {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.register-email-component-bulletpoint5 {
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  padding-top: var(--dl-layout-space-halfunit);
+  padding-left: 8px 8px 8px 0;
+  padding-right: 8px 8px 8px 0;
+  padding-bottom: var(--dl-layout-space-halfunit);
+  justify-content: center;
+}
+ 
+.register-email-component-container17 {
+  flex: 0 0 auto;
+  width: 6px;
+  height: 6px;
+  display: flex;
+  align-items: flex-start;
+  border-radius: var(--dl-layout-radius-round);
+  flex-direction: column;
+  background-color: var(--dl-color-theme-neutral-dark);
+}
+ 
+.register-email-component-text22 {
+  font-size: 14px;
+}
+ 
+.register-email-component-container18 {
+  gap: var(--dl-layout-space-halfunit);
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+ 
+.register-email-component-terms-agree {
+  gap: var(--dl-layout-space-halfunit);
+  display: flex;
+  padding: var(--dl-layout-space-halfunit);
+  align-items: flex-start;
+}
+ 
+.register-email-component-checkbox {
+  align-self: center;
+}
+ 
+.register-email-component-text25 {
+  text-align: center;
+}
+ 
+.register-email-component-have-an-account-login {
+  gap: var(--dl-layout-space-halfunit);
+  display: flex;
+  align-items: flex-start;
+}
+ 
+.register-email-component-container19 {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-self: center;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+ 
+.register-email-component-sign-up-image {
+  width: 100%;
+  height: 100%;
+}
+ 
+.register-email-component-text27 {
+  display: inline-block;
+}
+ 
+.register-email-component-text28 {
+  display: inline-block;
+}
+ 
+.register-email-component-text29 {
+  display: inline-block;
+}
+ 
+@media(max-width: 991px) {
+  .register-email-component-form-root {
+    width: 100%;
+    padding: var(--dl-layout-space-fourunits);
+  }
+  .register-email-component-container19 {
+    display: none;
+  }
+}
+ 
+@media(max-width: 479px) {
+  .register-email-component-form-root {
+    padding: var(--dl-layout-space-oneandhalfunits);
+  }
+  .register-email-component-pass-requirements {
+    flex-direction: column;
+  }
+  .register-email-component-button {
+    width: 100%;
+  }
+}

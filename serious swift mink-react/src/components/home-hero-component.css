@@ -1,0 +1,216 @@
+.home-hero-component-header78 {
+  gap: var(--dl-layout-space-threeunits);
+  width: 100%;
+  height: auto;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.home-hero-component-column {
+  gap: var(--dl-layout-space-oneandhalfunits);
+  width: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: var(--dl-layout-space-unit);
+}
+ 
+.home-hero-component-content1 {
+  gap: var(--dl-layout-space-oneandhalfunits);
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+  flex-direction: column;
+}
+ 
+.home-hero-component-text1 {
+  text-align: center;
+}
+ 
+.home-hero-component-text2 {
+  text-align: center;
+}
+ 
+.home-hero-component-actions {
+  gap: var(--dl-layout-space-unit);
+  display: flex;
+  align-items: flex-start;
+  padding-top: var(--dl-layout-space-unit);
+}
+ 
+.home-hero-component-text3 {
+  text-decoration: none;
+}
+ 
+.home-hero-component-content2 {
+  gap: var(--dl-layout-space-oneandhalfunits);
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.home-hero-component-row-container1 {
+  width: 100%;
+}
+ 
+.home-hero-component-placeholder-image10 {
+  width: 400px;
+  height: 400px;
+}
+ 
+.home-hero-component-placeholder-image11 {
+  width: 400px;
+  height: 400px;
+}
+ 
+.home-hero-component-placeholder-image12 {
+  width: 400px;
+  height: 400px;
+}
+ 
+.home-hero-component-placeholder-image13 {
+  width: 400px;
+  height: 400px;
+}
+ 
+.home-hero-component-placeholder-image14 {
+  width: 400px;
+  height: 400px;
+}
+ 
+.home-hero-component-placeholder-image15 {
+  width: 400px;
+  height: 400px;
+}
+ 
+.home-hero-component-placeholder-image16 {
+  width: 400px;
+  height: 400px;
+}
+ 
+.home-hero-component-placeholder-image17 {
+  width: 400px;
+  height: 400px;
+}
+ 
+.home-hero-component-placeholder-image18 {
+  width: 400px;
+  height: 400px;
+}
+ 
+.home-hero-component-placeholder-image19 {
+  width: 400px;
+  height: 400px;
+}
+ 
+.home-hero-component-placeholder-image20 {
+  width: 400px;
+  height: 400px;
+}
+ 
+.home-hero-component-placeholder-image21 {
+  width: 400px;
+  height: 400px;
+}
+ 
+.home-hero-component-row-container2 {
+  width: 100%;
+}
+ 
+.home-hero-component-placeholder-image22 {
+  width: 400px;
+  height: 400px;
+}
+ 
+.home-hero-component-placeholder-image23 {
+  width: 400px;
+  height: 400px;
+}
+ 
+.home-hero-component-placeholder-image24 {
+  width: 400px;
+  height: 400px;
+}
+ 
+.home-hero-component-placeholder-image25 {
+  width: 400px;
+  height: 400px;
+}
+ 
+.home-hero-component-placeholder-image26 {
+  width: 400px;
+  height: 400px;
+}
+ 
+.home-hero-component-placeholder-image27 {
+  width: 400px;
+  height: 400px;
+}
+ 
+.home-hero-component-placeholder-image28 {
+  width: 400px;
+  height: 400px;
+}
+ 
+.home-hero-component-placeholder-image29 {
+  width: 400px;
+  height: 400px;
+}
+ 
+.home-hero-component-placeholder-image30 {
+  width: 400px;
+  height: 400px;
+}
+ 
+.home-hero-component-placeholder-image31 {
+  width: 400px;
+  height: 400px;
+}
+ 
+.home-hero-component-placeholder-image32 {
+  width: 400px;
+  height: 400px;
+}
+ 
+.home-hero-component-placeholder-image33 {
+  width: 400px;
+  height: 400px;
+}
+ 
+.home-hero-component-container2 {
+  display: contents;
+}
+ 
+.home-hero-component-text4 {
+  display: inline-block;
+}
+ 
+.home-hero-component-text5 {
+  display: inline-block;
+}
+ 
+.home-hero-component-text6 {
+  display: inline-block;
+}
+ 
+@media(max-width: 767px) {
+  .home-hero-component-content2 {
+    width: 100%;
+  }
+}
+ 
+@media(max-width: 479px) {
+  .home-hero-component-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+  .home-hero-component-button {
+    width: 100%;
+  }
+}

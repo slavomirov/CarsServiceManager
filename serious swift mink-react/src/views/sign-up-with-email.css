@@ -1,0 +1,19 @@
+.sign-up-with-email-container {
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+ 
+.sign-up-with-email-text1 {
+  display: inline-block;
+}
+ 
+.sign-up-with-email-text2 {
+  display: inline-block;
+}
+ 
+.sign-up-with-email-text3 {
+  display: inline-block;
+}

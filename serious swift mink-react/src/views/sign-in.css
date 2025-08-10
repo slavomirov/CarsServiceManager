@@ -1,0 +1,15 @@
+.sign-in-container {
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+ 
+.sign-in-text1 {
+  display: inline-block;
+}
+ 
+.sign-in-text2 {
+  display: inline-block;
+}

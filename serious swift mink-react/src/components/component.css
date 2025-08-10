@@ -1,0 +1,8 @@
+.component-container {
+  width: 200px;
+  height: 100px;
+  display: grid;
+  position: relative;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+}
