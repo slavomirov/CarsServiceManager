@@ -269,3 +269,4 @@ C:\Users\spart\Desktop\project\CarsServiceManager\CarsServiceManagerApi\CarsServ
 C:\Users\spart\Desktop\project\CarsServiceManager\CarsServiceManagerApi\CarsServiceManagerApi\bin\Debug\net8.0\FluentValidation.dll
 C:\Users\spart\Desktop\project\CarsServiceManager\CarsServiceManagerApi\CarsServiceManagerApi\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
 C:\Users\spart\Desktop\project\CarsServiceManager\CarsServiceManagerApi\CarsServiceManagerApi\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\spart\Desktop\project\CarsServiceManager\CarsServiceManagerApi\CarsServiceManagerApi\obj\Debug\net8.0\CarsServiceManagerApi.sourcelink.json

@@ -5,12 +5,15 @@ import PropTypes from "prop-types";
 import "./register-email-component.css";
 
 const RegisterEmailComponent = (props) => {
+  var errors = [];
   const [formData, setFormData] = useState({
     username: "",
     email: "",
     password: "",
     passwordConfirm: "",
     service: "",
+    firstName: "",
+    lastName: "",
   });
 
   const handleChange = (e) => {
@@ -32,12 +35,17 @@ const RegisterEmailComponent = (props) => {
         body: JSON.stringify(formData),
       });
 
+      const data = await response.json();
+      console.log(data);
       if (!response.ok) {
-        console.log(response);
+        errors = data.errors[0].split(",").map((e) => {
+          const clean = e.replace(/'/g, "").trim();
+          const [field, ...rest] = clean.split(" ");
+          return { field, message: rest.join(" ") };
+        });
         throw new Error("Registration failed");
       }
 
-      const data = await response.json();
       console.log("✅ Registration successful", data);
     } catch (error) {
       console.error("❌ Error:", error);
@@ -64,6 +72,51 @@ const RegisterEmailComponent = (props) => {
               className="register-email-component-form2"
               onSubmit={handleSubmit}
             >
+              <div className="register-email-component-email">
+                <label htmlFor="thq-sign-up-1-email" className="thq-body-large">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="thq-sign-up-1-email"
+                  required
+                  placeholder="Email address"
+                  className="register-email-component-textinput2 thq-body-large thq-input"
+                  value={formData.email}
+                  onChange={handleChange}
+                  name="email"
+                />
+              </div>
+              <div className="register-email-component-email">
+                <label htmlFor="thq-sign-up-1-email" className="thq-body-large">
+                  First Name
+                </label>
+                <input
+                  type="text"
+                  id="thq-sign-up-1-firstName"
+                  required
+                  placeholder="First name"
+                  className="register-email-component-textinput2 thq-body-large thq-input"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  name="firstName"
+                />
+              </div>
+              <div className="register-email-component-email">
+                <label htmlFor="thq-sign-up-1-email" className="thq-body-large">
+                  Last Name
+                </label>
+                <input
+                  type="text"
+                  id="thq-sign-up-1-lastName"
+                  required
+                  placeholder="Last name"
+                  className="register-email-component-textinput2 thq-body-large thq-input"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  name="lastName"
+                />
+              </div>
               <div className="register-email-component-service-name">
                 <label
                   htmlFor="thq-sign-up-1-serviceName"
@@ -80,21 +133,6 @@ const RegisterEmailComponent = (props) => {
                   value={formData.service}
                   onChange={handleChange}
                   name="service"
-                />
-              </div>
-              <div className="register-email-component-email">
-                <label htmlFor="thq-sign-up-1-email" className="thq-body-large">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="thq-sign-up-1-email"
-                  required
-                  placeholder="Email address"
-                  className="register-email-component-textinput2 thq-body-large thq-input"
-                  value={formData.email}
-                  onChange={handleChange}
-                  name="email"
                 />
               </div>
               <div className="register-email-component-username">
@@ -235,7 +273,6 @@ const RegisterEmailComponent = (props) => {
               <input
                 type="checkbox"
                 id="thq-sign-up-1-newsletter"
-                checked
                 required
                 className="register-email-component-checkbox thq-checkbox"
               />
@@ -253,37 +290,6 @@ const RegisterEmailComponent = (props) => {
               type="submit"
               className="thq-button-filled register-email-component-button"
               onClick={handleSubmit}
-              // onClick={async () => {
-              //   try {
-              //     const response = await fetch(
-              //       "https://localhost:7053/Users/Register",
-              //       {
-              //         method: "POST",
-              //         headers: {
-              //           "Content-Type": "application/json",
-              //         },
-              //         body: JSON.stringify({
-              //           username: "testUser",
-              //           firstName: "Test",
-              //           lastName: "User",
-              //           password: "123456!aA",
-              //           passwordConfirm: "123456!aA",
-              //           email: "test@example.com",
-              //           service: "Car Service",
-              //         }),
-              //       }
-              //     );
-
-              //     if (!response.ok) {
-              //       throw new Error("Request failed");
-              //     }
-
-              //     const data = await response.json();
-              //     console.log("Success:", data);
-              //   } catch (error) {
-              //     console.error("Error:", error);
-              //   }
-              // }}
             >
               <span className="register-email-component-text25 thq-body-small">
                 {props.action1 ?? (
@@ -295,6 +301,13 @@ const RegisterEmailComponent = (props) => {
                 )}
               </span>
             </button>
+            <ul>
+              {errors.map((err, i) => (
+                <li key={i}>
+                  <b>{err.field}:</b> {err.message}
+                </li>
+              ))}
+            </ul>
             <div className="register-email-component-have-an-account-login">
               <p className="thq-body-large">Already have an account? Sign in</p>
             </div>

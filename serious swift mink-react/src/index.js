@@ -1,19 +1,19 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from "react";
+import ReactDOM from "react-dom";
 import {
   BrowserRouter as Router,
   Route,
   Switch,
   Redirect,
-} from 'react-router-dom'
+} from "react-router-dom";
 
-import './style.css'
-import Index from './views/index'
-import RegisterWithEmail from './views/register-with-email'
-import LogIn from './views/log-in'
-import Home from './views/home'
-import Register from './views/register'
-import NotFound from './views/not-found'
+import "./style.css";
+import Index from "./views/index";
+import RegisterWithEmail from "./views/register-with-email";
+import LogIn from "./views/log-in";
+import Home from "./views/home";
+import Register from "./views/register";
+import NotFound from "./views/not-found";
 
 const App = () => {
   return (
@@ -32,7 +32,7 @@ const App = () => {
         <Redirect to="**" />
       </Switch>
     </Router>
-  )
-}
+  );
+};
 
-ReactDOM.render(<App />, document.getElementById('app'))
+ReactDOM.render(<App />, document.getElementById("app"));

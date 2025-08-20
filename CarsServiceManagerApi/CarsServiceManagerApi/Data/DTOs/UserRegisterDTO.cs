@@ -10,3 +10,4 @@ public class UserRegisterDTO
     public string Email { get; set; }
     public string Service { get; set; }
 }
+    

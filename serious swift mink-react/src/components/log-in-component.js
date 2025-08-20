@@ -1,10 +1,50 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from "react";
 
-import PropTypes from 'prop-types'
+import { useHistory } from "react-router-dom";
 
-import './log-in-component.css'
+import PropTypes from "prop-types";
+
+import "./log-in-component.css";
 
 const LogInComponent = (props) => {
+  let history = useHistory();
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("https://localhost:7053/Users/Login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        console.log(response);
+        throw new Error("Registration failed");
+      }
+
+      const data = await response.json();
+      console.log("✅ Registration successful", data);
+      history.push("/index");
+    } catch (error) {
+      console.error("❌ Error:", error);
+    }
+  };
+
   return (
     <div className="log-in-component-container1">
       <div className="log-in-component-max-width thq-section-max-width">
@@ -39,9 +79,12 @@ const LogInComponent = (props) => {
                 <input
                   type="email"
                   id="thq-sign-in-6-email"
-                  required="true"
+                  required
                   placeholder="Email address"
                   className="log-in-component-textinput1 thq-body-large thq-input"
+                  value={formData.email}
+                  onChange={handleChange}
+                  name="email"
                 />
               </div>
               <div className="log-in-component-password">
@@ -66,9 +109,12 @@ const LogInComponent = (props) => {
                   <input
                     type="password"
                     id="thq-sign-in-6-password"
-                    required="true"
+                    required
                     placeholder="Password"
                     className="log-in-component-textinput2 thq-body-large thq-input"
+                    value={formData.password}
+                    onChange={handleChange}
+                    name="password"
                   />
                 </div>
                 <a
@@ -80,19 +126,20 @@ const LogInComponent = (props) => {
                   Forgot password
                 </a>
               </div>
+              <button
+                type="submit"
+                className="log-in-component-button1 thq-button-filled"
+                onClick={handleSubmit}
+              >
+                <span className="log-in-component-text15 thq-body-small">
+                  {props.action1 ?? (
+                    <Fragment>
+                      <span className="log-in-component-text19">Sign In</span>
+                    </Fragment>
+                  )}
+                </span>
+              </button>
             </form>
-            <button
-              type="submit"
-              className="log-in-component-button1 thq-button-filled"
-            >
-              <span className="log-in-component-text15 thq-body-small">
-                {props.action1 ?? (
-                  <Fragment>
-                    <span className="log-in-component-text19">Sign In</span>
-                  </Fragment>
-                )}
-              </span>
-            </button>
             <div className="log-in-component-divider1">
               <div className="log-in-component-divider2"></div>
               <p className="thq-body-large">OR</p>
@@ -113,22 +160,22 @@ const LogInComponent = (props) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 LogInComponent.defaultProps = {
   heading1: undefined,
   image1Src:
-    'https://images.unsplash.com/photo-1628011636812-eb8acf17e7b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTc1Mzg4ODU0MHw&ixlib=rb-4.1.0&q=80&w=1080',
+    "https://images.unsplash.com/photo-1628011636812-eb8acf17e7b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTc1Mzg4ODU0MHw&ixlib=rb-4.1.0&q=80&w=1080",
   action1: undefined,
-  image1Alt: 'Sign In Image',
-}
+  image1Alt: "Sign In Image",
+};
 
 LogInComponent.propTypes = {
   heading1: PropTypes.element,
   image1Src: PropTypes.string,
   action1: PropTypes.element,
   image1Alt: PropTypes.string,
-}
+};
 
-export default LogInComponent
+export default LogInComponent;
