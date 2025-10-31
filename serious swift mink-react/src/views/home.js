@@ -1,17 +1,17 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from "react";
 
-import { Helmet } from 'react-helmet'
+import { Helmet } from "react-helmet";
 
-import HomeHeaderComponent from '../components/home-header-component'
-import HomeHeroComponent from '../components/home-hero-component'
-import HomeFeaturesComponent from '../components/home-features-component'
-import HomeCTAComponent from '../components/home-cta-component'
-import HomeHero2Component from '../components/home-hero2-component'
-import HomePricingComponent from '../components/home-pricing-component'
-import HomeStepsComponent from '../components/home-steps-component'
-import HomeTestimonialComponent from '../components/home-testimonial-component'
-import HomeContactUsComponent from '../components/home-contact-us-component'
-import './home.css'
+import HomeHeaderComponent from "../components/home-header-component";
+import HomeHeroComponent from "../components/home-hero-component";
+import HomeFeaturesComponent from "../components/home-features-component";
+import HomeCTAComponent from "../components/home-cta-component";
+import HomeHero2Component from "../components/home-hero2-component";
+import HomePricingComponent from "../components/home-pricing-component";
+import HomeStepsComponent from "../components/home-steps-component";
+import HomeTestimonialComponent from "../components/home-testimonial-component";
+import HomeContactUsComponent from "../components/home-contact-us-component";
+import "./home.css";
 
 const Home = (props) => {
   return (
@@ -21,46 +21,6 @@ const Home = (props) => {
         <meta property="og:title" content="Serious Swift Mink" />
       </Helmet>
       <HomeHeaderComponent
-        link1={
-          <Fragment>
-            <span className="home-text100">#home</span>
-          </Fragment>
-        }
-        link2={
-          <Fragment>
-            <span className="home-text101">#services</span>
-          </Fragment>
-        }
-        link3={
-          <Fragment>
-            <span className="home-text102">#appointments</span>
-          </Fragment>
-        }
-        link4={
-          <Fragment>
-            <span className="home-text103">#contact</span>
-          </Fragment>
-        }
-        page1={
-          <Fragment>
-            <span className="home-text104">Home</span>
-          </Fragment>
-        }
-        page2={
-          <Fragment>
-            <span className="home-text105">Services</span>
-          </Fragment>
-        }
-        page3={
-          <Fragment>
-            <span className="home-text106">Appointments</span>
-          </Fragment>
-        }
-        page4={
-          <Fragment>
-            <span className="home-text107">Contact Us</span>
-          </Fragment>
-        }
         action1={
           <Fragment>
             <span className="home-text108">Register</span>
@@ -264,7 +224,7 @@ const Home = (props) => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               <span
                 dangerouslySetInnerHTML={{
-                  __html: ' ',
+                  __html: " ",
                 }}
               />
             </span>
@@ -672,7 +632,7 @@ const Home = (props) => {
         }
       ></HomeContactUsComponent>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

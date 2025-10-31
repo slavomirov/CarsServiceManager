@@ -1,24 +1,53 @@
 import { generateWeekDays, isTheSameDay, today } from "./date.js";
-import { isEventAllDay, eventStartsBefore, eventEndsBefore, initDynamicEvent, eventCollidesWith, adjustDynamicEventMaxLines } from "./event.js";
+import {
+  isEventAllDay,
+  eventStartsBefore,
+  eventEndsBefore,
+  initDynamicEvent,
+  eventCollidesWith,
+  adjustDynamicEventMaxLines,
+} from "./event.js";
 import { initEventList } from "./event-list.js";
 
-const calendarTemplateElement = document.querySelector("[data-template='week-calendar']");
-const calendarDayOfWeekTemplateElement = document.querySelector("[data-template='week-calendar-day-of-week']");
-const calendarAllDayListItemTemplateElement = document.querySelector("[data-template='week-calendar-all-day-list-item']");
-const calendarColumnTemplateElement = document.querySelector("[data-template='week-calendar-column']");
+const calendarTemplateElement = document.querySelector(
+  "[data-template='week-calendar']"
+);
+const calendarDayOfWeekTemplateElement = document.querySelector(
+  "[data-template='week-calendar-day-of-week']"
+);
+const calendarAllDayListItemTemplateElement = document.querySelector(
+  "[data-template='week-calendar-all-day-list-item']"
+);
+const calendarColumnTemplateElement = document.querySelector(
+  "[data-template='week-calendar-column']"
+);
 
 const dateFormatter = new Intl.DateTimeFormat("en-US", {
-  weekday: 'short'
+  weekday: "short",
 });
 
-export function initWeekCalendar(parent, selectedDate, eventStore, isSingleDay, deviceType) {
+export function initWeekCalendar(
+  parent,
+  selectedDate,
+  eventStore,
+  isSingleDay,
+  deviceType
+) {
   const calendarContent = calendarTemplateElement.content.cloneNode(true);
   const calendarElement = calendarContent.querySelector("[data-week-calendar]");
-  const calendarDayOfWeekListElement = calendarElement.querySelector("[data-week-calendar-day-of-week-list]");
-  const calendarAllDayListElement = calendarElement.querySelector("[data-week-calendar-all-day-list]");
-  const calendarColumnsElement = calendarElement.querySelector("[data-week-calendar-columns]");
+  const calendarDayOfWeekListElement = calendarElement.querySelector(
+    "[data-week-calendar-day-of-week-list]"
+  );
+  const calendarAllDayListElement = calendarElement.querySelector(
+    "[data-week-calendar-all-day-list]"
+  );
+  const calendarColumnsElement = calendarElement.querySelector(
+    "[data-week-calendar-columns]"
+  );
 
-  const weekDays = isSingleDay ? [selectedDate] : generateWeekDays(selectedDate);
+  const weekDays = isSingleDay
+    ? [selectedDate]
+    : generateWeekDays(selectedDate);
   for (const weekDay of weekDays) {
     const events = eventStore.getEventsByDate(weekDay);
     const allDayEvents = events.filter((event) => isEventAllDay(event));
@@ -26,9 +55,17 @@ export function initWeekCalendar(parent, selectedDate, eventStore, isSingleDay, 
 
     sortEventsByTime(nonAllDayEvents);
 
-    initDayOfWeek(calendarDayOfWeekListElement, selectedDate, weekDay, deviceType);
+    initDayOfWeek(
+      calendarDayOfWeekListElement,
+      selectedDate,
+      weekDay,
+      deviceType
+    );
 
-    if (deviceType === "desktop" || (deviceType === "mobile" && isTheSameDay(weekDay, selectedDate))) {
+    if (
+      deviceType === "desktop" ||
+      (deviceType === "mobile" && isTheSameDay(weekDay, selectedDate))
+    ) {
       initAllDayListItem(calendarAllDayListElement, allDayEvents);
       initColumn(calendarColumnsElement, weekDay, nonAllDayEvents);
     }
@@ -40,7 +77,9 @@ export function initWeekCalendar(parent, selectedDate, eventStore, isSingleDay, 
 
   parent.appendChild(calendarElement);
 
-  const dynamicEventElements = calendarElement.querySelectorAll("[data-event-dynamic]");
+  const dynamicEventElements = calendarElement.querySelectorAll(
+    "[data-event-dynamic]"
+  );
 
   for (const dynamicEventElement of dynamicEventElements) {
     adjustDynamicEventMaxLines(dynamicEventElement);
@@ -48,47 +87,46 @@ export function initWeekCalendar(parent, selectedDate, eventStore, isSingleDay, 
 }
 
 function initDayOfWeek(parent, selectedDate, weekDay, deviceType) {
-  const calendarDayOfWeekContent = calendarDayOfWeekTemplateElement.content.cloneNode(true);
-  const calendarDayOfWeekElement = calendarDayOfWeekContent.querySelector("[data-week-calendar-day-of-week]");
-  const calendarDayOfWeekButtonElement = calendarDayOfWeekElement.querySelector("[data-week-calendar-day-of-week-button]");
-  const calendarDayOfWeekDayElement = calendarDayOfWeekElement.querySelector("[data-week-calendar-day-of-week-day]");
-  const calendarDayOfWeekNumberElement = calendarDayOfWeekElement.querySelector("[data-week-calendar-day-of-week-number]");
+  const calendarDayOfWeekContent =
+    calendarDayOfWeekTemplateElement.content.cloneNode(true);
+  const calendarDayOfWeekElement = calendarDayOfWeekContent.querySelector(
+    "[data-week-calendar-day-of-week]"
+  );
+  const calendarDayOfWeekButtonElement = calendarDayOfWeekElement.querySelector(
+    "[data-week-calendar-day-of-week-button]"
+  );
+  const calendarDayOfWeekDayElement = calendarDayOfWeekElement.querySelector(
+    "[data-week-calendar-day-of-week-day]"
+  );
+  const calendarDayOfWeekNumberElement = calendarDayOfWeekElement.querySelector(
+    "[data-week-calendar-day-of-week-number]"
+  );
 
   calendarDayOfWeekNumberElement.textContent = weekDay.getDate();
   calendarDayOfWeekDayElement.textContent = dateFormatter.format(weekDay);
 
   if (isTheSameDay(weekDay, today())) {
-    calendarDayOfWeekButtonElement.classList.add("week-calendar__day-of-week-button--highlight");
+    calendarDayOfWeekButtonElement.classList.add(
+      "week-calendar__day-of-week-button--highlight"
+    );
   }
 
   if (isTheSameDay(weekDay, selectedDate)) {
-    calendarDayOfWeekButtonElement.classList.add("week-calendar__day-of-week-button--selected");
+    calendarDayOfWeekButtonElement.classList.add(
+      "week-calendar__day-of-week-button--selected"
+    );
   }
-
-  calendarDayOfWeekButtonElement.addEventListener("click", () => {
-    document.dispatchEvent(new CustomEvent("date-change", {
-      detail: {
-        date: weekDay
-      },
-      bubbles: true
-    }));
-
-    if (deviceType !== "mobile") {
-      document.dispatchEvent(new CustomEvent("view-change", {
-        detail: {
-          view: "day"
-        },
-        bubbles: true
-      }));
-    }
-  });
 
   parent.appendChild(calendarDayOfWeekElement);
 }
 
 function initAllDayListItem(parent, events) {
-  const calendarAllDayListItemContent = calendarAllDayListItemTemplateElement.content.cloneNode(true);
-  const calendarAllDayListItemElement = calendarAllDayListItemContent.querySelector("[data-week-calendar-all-day-list-item]");
+  const calendarAllDayListItemContent =
+    calendarAllDayListItemTemplateElement.content.cloneNode(true);
+  const calendarAllDayListItemElement =
+    calendarAllDayListItemContent.querySelector(
+      "[data-week-calendar-all-day-list-item]"
+    );
 
   initEventList(calendarAllDayListItemElement, events);
 
@@ -96,9 +134,14 @@ function initAllDayListItem(parent, events) {
 }
 
 function initColumn(parent, weekDay, events) {
-  const calendarColumnContent = calendarColumnTemplateElement.content.cloneNode(true);
-  const calendarColumnElement = calendarColumnContent.querySelector("[data-week-calendar-column]");
-  const calendarColumnCellElements = calendarColumnElement.querySelectorAll("[data-week-calendar-cell]");
+  const calendarColumnContent =
+    calendarColumnTemplateElement.content.cloneNode(true);
+  const calendarColumnElement = calendarColumnContent.querySelector(
+    "[data-week-calendar-column]"
+  );
+  const calendarColumnCellElements = calendarColumnElement.querySelectorAll(
+    "[data-week-calendar-cell]"
+  );
 
   const eventsWithDynamicStyles = calculateEventsDynamicStyles(events);
   for (const eventWithDynamicStyles of eventsWithDynamicStyles) {
@@ -117,14 +160,16 @@ function initColumn(parent, weekDay, events) {
     const cellEndTime = cellStartTime + 60;
 
     calendarColumnCellElement.addEventListener("click", () => {
-      document.dispatchEvent(new CustomEvent("event-create-request", {
-        detail: {
-          date: weekDay,
-          startTime: cellStartTime,
-          endTime: cellEndTime
-        },
-        bubbles: true
-      }));
+      document.dispatchEvent(
+        new CustomEvent("event-create-request", {
+          detail: {
+            date: weekDay,
+            startTime: cellStartTime,
+            endTime: cellEndTime,
+          },
+          bubbles: true,
+        })
+      );
     });
   }
 
@@ -148,7 +193,9 @@ function calculateEventsDynamicStyles(events) {
     const topPercentage = 100 * (eventGroupItem.event.startTime / 1440);
     const bottomPercentage = 100 - 100 * (eventGroupItem.event.endTime / 1440);
     const leftPercentage = columnWidth * eventGroupItem.columnIndex;
-    const rightPercentage = columnWidth * (totalColumns - eventGroupItem.columnIndex - eventGroupItem.columnSpan);
+    const rightPercentage =
+      columnWidth *
+      (totalColumns - eventGroupItem.columnIndex - eventGroupItem.columnSpan);
 
     return {
       event: eventGroupItem.event,
@@ -156,9 +203,9 @@ function calculateEventsDynamicStyles(events) {
         top: `${topPercentage}%`,
         bottom: `${bottomPercentage}%`,
         left: `${leftPercentage}%`,
-        right: `${rightPercentage}%`
-      }
-    }
+        right: `${rightPercentage}%`,
+      },
+    };
   });
 }
 
@@ -172,8 +219,8 @@ function groupEvents(events) {
       event: events[0],
       columnIndex: 0,
       isInitial: true,
-      eventIndex: 0
-    }
+      eventIndex: 0,
+    },
   ];
 
   const eventGroups = [firstEventGroup];
@@ -182,14 +229,16 @@ function groupEvents(events) {
     const lastEventGroup = eventGroups[eventGroups.length - 1];
     const loopEvent = events[i];
 
-    const lastEventGroupCollidingItems = lastEventGroup.filter((eventGroupItem) => eventCollidesWith(eventGroupItem.event, loopEvent));
+    const lastEventGroupCollidingItems = lastEventGroup.filter(
+      (eventGroupItem) => eventCollidesWith(eventGroupItem.event, loopEvent)
+    );
 
     if (lastEventGroupCollidingItems.length === 0) {
       const newEventGroupItem = {
         event: loopEvent,
         columnIndex: 0,
         isInitial: true,
-        eventIndex: i
+        eventIndex: i,
       };
 
       const newEventGroup = [newEventGroupItem];
@@ -202,7 +251,7 @@ function groupEvents(events) {
         event: loopEvent,
         columnIndex: lastEventGroup.length,
         isInitial: true,
-        eventIndex: i
+        eventIndex: i,
       };
 
       lastEventGroup.push(newEventGroupItem);
@@ -211,7 +260,9 @@ function groupEvents(events) {
 
     let newColumnIndex = 0;
     while (true) {
-      const isColumnIndexInUse = lastEventGroupCollidingItems.some((eventGroupItem) => eventGroupItem.columnIndex === newColumnIndex);
+      const isColumnIndexInUse = lastEventGroupCollidingItems.some(
+        (eventGroupItem) => eventGroupItem.columnIndex === newColumnIndex
+      );
 
       if (isColumnIndexInUse) {
         newColumnIndex += 1;
@@ -224,15 +275,15 @@ function groupEvents(events) {
       event: loopEvent,
       columnIndex: newColumnIndex,
       isInitial: true,
-      eventIndex: i
+      eventIndex: i,
     };
 
     const newEventGroup = [
       ...lastEventGroupCollidingItems.map((eventGroupItem) => ({
         ...eventGroupItem,
-        isInitial: false
+        isInitial: false,
       })),
-      newEventGroupItem
+      newEventGroupItem,
     ];
 
     eventGroups.push(newEventGroup);
@@ -247,16 +298,20 @@ function groupEvents(events) {
 
   for (const eventGroup of eventGroups) {
     eventGroup.sort((columnGroupItemA, columnGroupItemB) => {
-      return columnGroupItemA.columnIndex < columnGroupItemB.columnIndex ? -1 : 1;
+      return columnGroupItemA.columnIndex < columnGroupItemB.columnIndex
+        ? -1
+        : 1;
     });
 
     for (let i = 0; i < eventGroup.length; i += 1) {
       const loopEventGroupItem = eventGroup[i];
       if (i === eventGroup.length - 1) {
-        loopEventGroupItem.columnSpan = totalColumns - loopEventGroupItem.columnIndex;
+        loopEventGroupItem.columnSpan =
+          totalColumns - loopEventGroupItem.columnIndex;
       } else {
         const nextLoopEventGroupItem = eventGroup[i + 1];
-        loopEventGroupItem.columnSpan = nextLoopEventGroupItem.columnIndex - loopEventGroupItem.columnIndex;
+        loopEventGroupItem.columnSpan =
+          nextLoopEventGroupItem.columnIndex - loopEventGroupItem.columnIndex;
       }
     }
   }
@@ -267,7 +322,10 @@ function groupEvents(events) {
     for (const eventGroup of eventGroups) {
       for (const eventGroupItem of eventGroup) {
         if (eventGroupItem.eventIndex === i) {
-          lowestColumnSpan = Math.min(lowestColumnSpan, eventGroupItem.columnSpan);
+          lowestColumnSpan = Math.min(
+            lowestColumnSpan,
+            eventGroupItem.columnSpan
+          );
         }
       }
     }
@@ -291,7 +349,7 @@ function sortEventsByTime(events) {
     }
 
     if (eventStartsBefore(eventB, eventA)) {
-      return 1
+      return 1;
     }
 
     return eventEndsBefore(eventA, eventB) ? 1 : -1;

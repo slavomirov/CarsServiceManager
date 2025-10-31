@@ -39,7 +39,7 @@ const LogInComponent = (props) => {
 
       const data = await response.json();
       console.log("✅ Registration successful", data);
-      history.push("/index");
+      // history.push("/index");
     } catch (error) {
       console.error("❌ Error:", error);
     }

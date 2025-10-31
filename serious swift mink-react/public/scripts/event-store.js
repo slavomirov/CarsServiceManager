@@ -60,6 +60,7 @@ function saveEventsIntoLocalStorage(events) {
   }
 
   localStorage.setItem("events", stringifiedEvents);
+  
 }
 
 function getEventsFromLocalStorage() {

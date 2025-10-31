@@ -1,9 +1,9 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from "react";
 
-import { Helmet } from 'react-helmet'
+import { Helmet } from "react-helmet";
 
-import IndexHeaderComponent from '../components/index-header-component'
-import './index.css'
+import IndexHeaderComponent from "../components/index-header-component";
+import "./index.css";
 
 const Index = (props) => {
   return (
@@ -39,8 +39,27 @@ const Index = (props) => {
           </Fragment>
         }
       ></IndexHeaderComponent>
-    </div>
-  )
-}
 
-export default Index
+
+      <div style={{ position: "relative", width: "100%", height: "100vh" }}>
+  <iframe
+    src="/schedules.html"
+    title="Responsive iframe"
+    style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+      border: "0",
+    }}
+    allowFullScreen
+  />
+    </div>
+
+      
+    </div>
+  );
+};
+
+export default Index;
