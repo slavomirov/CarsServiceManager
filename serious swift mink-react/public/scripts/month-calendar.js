@@ -11,7 +11,7 @@ const calendarWeekClasses = {
   6: "six-week"
 };
 
-export function initMonthCalendar(parent, selectedDate, eventStore) {
+export async function initMonthCalendar(parent, selectedDate, eventStore) {
   const calendarContent = calendarTemplateElemenent.content.cloneNode(true);
   const calendarElement = calendarContent.querySelector("[data-month-calendar]");
   const calendarDayListElement = calendarElement.querySelector("[data-month-calendar-day-list]");
@@ -23,7 +23,7 @@ export function initMonthCalendar(parent, selectedDate, eventStore) {
   calendarElement.classList.add(calendarWeekClass);
 
   for (const calendarDay of calendarDays) {
-    const events = eventStore.getEventsByDate(calendarDay);
+    const events = await eventStore.getEventsByDate(calendarDay);
     sortCalendarDayEvents(events);
 
     initCalendarDay(calendarDayListElement, calendarDay, events);

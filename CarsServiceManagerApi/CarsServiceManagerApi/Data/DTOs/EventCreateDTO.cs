@@ -8,7 +8,7 @@ public class EventCreateDTO
 
     public string Color { get; set; }
 
-    public DateTime Date { get; set; }
+    public DateOnly Date { get; set; }
 
     public string Title { get; set; }
 }

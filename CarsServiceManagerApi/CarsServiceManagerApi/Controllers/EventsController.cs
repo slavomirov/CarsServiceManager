@@ -35,7 +35,7 @@ public class EventsController : ControllerBase, IEventsController
     public async Task<Event?> GetEvent(int id) => await _eventService.GetEventAsync(id);
 
     [HttpPost("Update")]
-    public async Task<IActionResult> UpdateEvent(Event input)
+    public async Task<IActionResult> UpdateEvent([FromBody]Event input)
     {
         await _eventService.UpdateEventAsync(input);
         return Ok();
