@@ -1,5 +1,7 @@
 import { isTheSameDay } from "./date.js";
 
+// import { ENDPOINTS } from "./constants.js";
+
 export function initEventStore() {
   document.addEventListener("event-create", (event) => {
     const createdEvent = event.detail.event;
@@ -60,7 +62,7 @@ function saveEventsIntoLocalStorage(events) {
   }
 
   localStorage.setItem("events", stringifiedEvents);
-  
+
 }
 
 function getEventsFromLocalStorage() {
@@ -84,3 +86,18 @@ function getEventsFromLocalStorage() {
 
   return events;
 }
+
+
+// async function fetchEventsFromAPI() {
+//   try {
+//     const response = await fetch(ENDPOINTS.EVENTS);
+//     const data = await response.json();
+//     return data.map(event => ({
+//       ...event,
+//       date: new Date(event.date)
+//     }));
+//   } catch (error) {
+//     console.error("Failed to fetch events", error);
+//     return [];
+//   }
+// }

@@ -6,6 +6,8 @@ import PropTypes from "prop-types";
 
 import "./log-in-component.css";
 
+// import { ENDPOINTS } from "./constants.js";
+
 const LogInComponent = (props) => {
   let history = useHistory();
   const [formData, setFormData] = useState({

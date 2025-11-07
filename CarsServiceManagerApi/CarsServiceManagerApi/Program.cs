@@ -47,9 +47,11 @@ builder.Services.AddSwaggerGen();
 //services
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IEventService, EventService>();
 
 //accessors
 builder.Services.AddScoped<IUserAccessor, UserAccessor>();
+builder.Services.AddScoped<IEventAccessor, EventAccessor>();
 
 //builder.Services.AddFluentValidationAutoValidation();
 

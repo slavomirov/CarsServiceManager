@@ -9,4 +9,6 @@ public class AppDbContext : IdentityDbContext<User>
         : base(options)
     {
     }
+
+    public DbSet<Event> Events { get; set; }
 }

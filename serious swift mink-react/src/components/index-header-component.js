@@ -173,33 +173,33 @@ const IndexHeaderComponent = (props) => {
 
 IndexHeaderComponent.defaultProps = {
   link1: undefined,
-  link3: undefined,
-  link2Url: "https://www.teleporthq.io",
-  link5Url: "https://www.teleporthq.io",
-  logoAlt: "Car Service Management",
-  link4: undefined,
-  link3Url: "https://www.teleporthq.io",
+  link1Url: "https://www.teleporthq.io", //TODO:
   link2: undefined,
+  link2Url: "https://www.teleporthq.io", //TODO:
+  link3: undefined,
+  link3Url: "https://www.teleporthq.io", //TODO:
+  link4: undefined,
+  link4Url: "https://www.teleporthq.io", //TODO:
   link5: undefined,
-  link1Url: "https://www.teleporthq.io",
-  link4Url: "https://www.teleporthq.io",
+  link5Url: "https://www.teleporthq.io", //TODO:
   logoSrc:
-    "https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/84ec08e8-34e9-42c7-9445-d2806d156403/fac575ac-7a41-484f-b7ac-875042de11f8?org_if_sml=1&force_format=original",
+  "https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/84ec08e8-34e9-42c7-9445-d2806d156403/fac575ac-7a41-484f-b7ac-875042de11f8?org_if_sml=1&force_format=original",
+  logoAlt: "Car Service Management",
 };
 
 IndexHeaderComponent.propTypes = {
   link1: PropTypes.element,
-  link3: PropTypes.element,
-  link2Url: PropTypes.string,
-  link5Url: PropTypes.string,
-  logoAlt: PropTypes.string,
-  link4: PropTypes.element,
-  link3Url: PropTypes.string,
-  link2: PropTypes.element,
-  link5: PropTypes.element,
   link1Url: PropTypes.string,
+  link2: PropTypes.element,
+  link2Url: PropTypes.string,
+  link3: PropTypes.element,
+  link3Url: PropTypes.string,
+  link4: PropTypes.element,
   link4Url: PropTypes.string,
+  link5: PropTypes.element,
+  link5Url: PropTypes.string,
   logoSrc: PropTypes.string,
+  logoAlt: PropTypes.string,
 };
 
 export default IndexHeaderComponent;
