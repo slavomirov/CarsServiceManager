@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from "react";
+import { apiClient } from "../scripts/apiClient";
 
 import PropTypes from "prop-types";
 
@@ -28,8 +29,7 @@ const RegisterEmailComponent = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      const response = await fetch("https://localhost:7053/Users/Register", {
+      const response = await apiClient("https://localhost:7053/Users/Register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -37,21 +37,6 @@ const RegisterEmailComponent = (props) => {
         body: JSON.stringify(formData),
       });
 
-      const data = await response.json();
-      console.log(data);
-      if (!response.ok) {
-        errors = data.errors[0].split(",").map((e) => {
-          const clean = e.replace(/'/g, "").trim();
-          const [field, ...rest] = clean.split(" ");
-          return { field, message: rest.join(" ") };
-        });
-        throw new Error("Registration failed");
-      }
-
-      console.log("✅ Registration successful", data);
-    } catch (error) {
-      console.error("❌ Error:", error);
-    }
   };
 
   return (

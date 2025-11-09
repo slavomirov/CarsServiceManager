@@ -14,9 +14,12 @@ import LogIn from "./views/log-in";
 import Home from "./views/home";
 import Register from "./views/register";
 import NotFound from "./views/not-found";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"
 
 const App = () => {
   return (
+    <div>
     <Router>
       <Switch>
         <Route component={Index} exact path="/index" />
@@ -24,7 +27,7 @@ const App = () => {
           component={RegisterWithEmail}
           exact
           path="/register-with-email"
-        />
+          />
         <Route component={LogIn} exact path="/log-in" />
         <Route component={Home} exact path="/" />
         <Route component={Register} exact path="/register" />
@@ -32,6 +35,8 @@ const App = () => {
         <Redirect to="**" />
       </Switch>
     </Router>
+    <ToastContainer position="top-right" autoClose={5000}  closeOnClick rtl={false} pauseOnFocusLoss pauseOnHover />
+    </div>
   );
 };
 

@@ -7,8 +7,8 @@ public class EventValidator : AbstractValidator<Event>
 {
     public EventValidator()
     {
-        RuleFor(x => x.StartTime).NotNull().Must(x => x >= 0);
-        RuleFor(x => x.EndTime).NotNull().Must(x => x >= 0);
+        RuleFor(x => x.StartTime).NotNull().Must(x => x >= 0).NotEqual(x => x.EndTime);
+        RuleFor(x => x.EndTime).NotNull().Must(x => x >= 0).NotEqual(x => x.StartTime).GreaterThan(x => x.StartTime);
         RuleFor(x => x.Date).NotEmpty();
         RuleFor(x => x.Title).NotEmpty();
     }

@@ -1,3 +1,4 @@
+import { apiClient } from "./apiClient.js";
 import { isTheSameDay } from "./date.js";
 
 const eventsEndpoint = "https://localhost:7053/Events";
@@ -28,7 +29,7 @@ export function initEventStore() {
 
 async function createEvent(event) {
   try {
-    await fetch(`${eventsEndpoint}/Create`, {
+    await apiClient(`${eventsEndpoint}/Create`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ ...event, date: event.date.toISOString() })
@@ -40,7 +41,7 @@ async function createEvent(event) {
 
 async function deleteEvent(eventId) {
   try {
-    await fetch(`${eventsEndpoint}/Delete?id=${eventId}`, {
+    await apiClient(`${eventsEndpoint}/Delete?id=${eventId}`, {
       method: "DELETE"
     });
   } catch (error) {
@@ -51,7 +52,7 @@ async function deleteEvent(eventId) {
 
 async function editEvent(event) {
   try {
-    await fetch(`${eventsEndpoint}/Update`, {
+    await apiClient(`${eventsEndpoint}/Update`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ ...event, date: event.date.toISOString().split("T")[0] })
@@ -63,7 +64,7 @@ async function editEvent(event) {
 
 async function fetchEventsFromAPI() {
   try {
-    const response = await fetch(`${eventsEndpoint}/GetAll`);
+    const response = await apiClient(`${eventsEndpoint}/GetAll`);
     const data = await response.json();
     return data.map(event => ({
       ...event,

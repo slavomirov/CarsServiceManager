@@ -2,6 +2,7 @@ using CarsServiceManagerApi.Data;
 using CarsServiceManagerApi.Data.Accessors;
 using CarsServiceManagerApi.Data.Accessors.Interfaces;
 using CarsServiceManagerApi.Data.Validators;
+using CarsServiceManagerApi.Middlewares;
 using CarsServiceManagerApi.Services;
 using CarsServiceManagerApi.Services.Interfaces;
 using FluentValidation;
@@ -32,7 +33,7 @@ builder.Services.AddCors(options =>
         policy =>
         {
             policy
-                .WithOrigins("http://localhost:3000") // React dev server - TODO
+                .WithOrigins(builder.Configuration.GetConnectionString("FrontEndServer")!) // React dev server - TODO
                 .AllowAnyHeader()
                 .AllowAnyMethod();
         });
@@ -60,6 +61,7 @@ builder.Services.AddValidatorsFromAssemblyContaining<UserRegisterDTOValidator>()
 var app = builder.Build();
 
 app.UseCors("AllowReactApp");
+app.UseMiddleware<ErrorHandlingMiddleware>();
 
 if (app.Environment.IsDevelopment())
 {

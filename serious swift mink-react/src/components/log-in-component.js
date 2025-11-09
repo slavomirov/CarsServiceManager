@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 import PropTypes from "prop-types";
 
 import "./log-in-component.css";
+import { apiClient } from "../scripts/apiClient";
 
 // import { ENDPOINTS } from "./constants.js";
 
@@ -25,8 +26,7 @@ const LogInComponent = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      const response = await fetch("https://localhost:7053/Users/Login", {
+      const response = await apiClient("https://localhost:7053/Users/Login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -34,17 +34,7 @@ const LogInComponent = (props) => {
         body: JSON.stringify(formData),
       });
 
-      if (!response.ok) {
-        console.log(response);
-        throw new Error("Registration failed");
-      }
-
       const data = await response.json();
-      console.log("✅ Registration successful", data);
-      // history.push("/index");
-    } catch (error) {
-      console.error("❌ Error:", error);
-    }
   };
 
   return (
