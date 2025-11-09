@@ -20,6 +20,7 @@ export function initEventFormDialog() {
   });
 
   document.addEventListener("event-edit-request", (event) => {
+    console.log(event); 
     dialogTitleElement.textContent = "Edit event";
     eventForm.switchToEditMode(event.detail.event);
     dialog.open();

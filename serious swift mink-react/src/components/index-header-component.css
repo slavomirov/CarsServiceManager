@@ -10,10 +10,10 @@
   width: 100%;
   display: flex;
   align-items: center;
-  padding-top: var(--dl-layout-space-twounits);
+  padding-top: var(--dl-layout-space-unit);
   padding-left: var(--dl-layout-space-threeunits);
   padding-right: var(--dl-layout-space-threeunits);
-  padding-bottom: var(--dl-layout-space-twounits);
+  padding-bottom: var(--dl-layout-space-unit);
   justify-content: space-between;
 }
  

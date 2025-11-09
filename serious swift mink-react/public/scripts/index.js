@@ -14,7 +14,7 @@ import { initUrl } from "./url.js";
 import { initSync } from "./sync.js";
 
 const eventStore = initEventStore();
-initCalendar(eventStore);
+await initCalendar(eventStore);
 initEventCreateButtons();
 initEventDeleteDialog();
 initEventDetailsDialog();

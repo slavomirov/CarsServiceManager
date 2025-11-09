@@ -4,6 +4,8 @@ import PropTypes from "prop-types";
 
 import "./register-email-component.css";
 
+// import { ENDPOINTS } from "./constants.js";
+
 const RegisterEmailComponent = (props) => {
   var errors = [];
   const [formData, setFormData] = useState({

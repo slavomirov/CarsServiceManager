@@ -9,3 +9,10 @@ public class User : IdentityUser
     public string ServiceName { get; set; }
     public UserType Type { get; set; }
 }
+
+public enum UserType
+{
+    Administrator = 0,
+    Receiver = 1,
+    Mechanic = 2
+}

@@ -26,7 +26,7 @@ const dateFormatter = new Intl.DateTimeFormat("en-US", {
   weekday: "short",
 });
 
-export function initWeekCalendar(
+export async function initWeekCalendar(
   parent,
   selectedDate,
   eventStore,
@@ -49,7 +49,7 @@ export function initWeekCalendar(
     ? [selectedDate]
     : generateWeekDays(selectedDate);
   for (const weekDay of weekDays) {
-    const events = eventStore.getEventsByDate(weekDay);
+    const events = await eventStore.getEventsByDate(weekDay);
     const allDayEvents = events.filter((event) => isEventAllDay(event));
     const nonAllDayEvents = events.filter((event) => !isEventAllDay(event));
 
