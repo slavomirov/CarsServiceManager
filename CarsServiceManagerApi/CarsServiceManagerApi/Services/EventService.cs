@@ -1,5 +1,4 @@
 ﻿using CarsServiceManagerApi.Data;
-using CarsServiceManagerApi.Data.Accessors;
 using CarsServiceManagerApi.Data.Accessors.Interfaces;
 using CarsServiceManagerApi.Data.DTOs;
 using CarsServiceManagerApi.Data.Validators;

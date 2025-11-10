@@ -1,5 +1,4 @@
-﻿using CarsServiceManagerApi.Controllers.Interfaces;
-using CarsServiceManagerApi.Data;
+﻿using CarsServiceManagerApi.Data;
 using CarsServiceManagerApi.Data.DTOs;
 using CarsServiceManagerApi.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -8,7 +7,7 @@ namespace CarsServiceManagerApi.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class EventsController : ControllerBase, IEventsController
+public class EventsController : ControllerBase
 {
     private readonly IEventService _eventService;
 

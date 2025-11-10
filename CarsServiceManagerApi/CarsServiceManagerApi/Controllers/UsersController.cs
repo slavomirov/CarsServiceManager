@@ -1,5 +1,4 @@
-﻿using CarsServiceManagerApi.Controllers.Interfaces;
-using CarsServiceManagerApi.Data.DTOs;
+﻿using CarsServiceManagerApi.Data.DTOs;
 using CarsServiceManagerApi.Services.Interfaces;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
@@ -8,7 +7,7 @@ namespace CarsServiceManagerApi.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class UsersController : ControllerBase, IUsersController
+public class UsersController : ControllerBase
 {
     private readonly IUserService _userService;
     private readonly IAuthService _authService;

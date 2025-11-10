@@ -13,7 +13,7 @@ namespace CarsServiceManagerApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     [Migration("20251107181610_DateOnly")]
-    partial class DateOnly
+    partial class AddDateOnly
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -37,7 +37,7 @@ namespace CarsServiceManagerApi.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateOnly>("Date")
+                    b.Property<AddDateOnly>("Date")
                         .HasColumnType("date");
 
                     b.Property<int>("EndTime")

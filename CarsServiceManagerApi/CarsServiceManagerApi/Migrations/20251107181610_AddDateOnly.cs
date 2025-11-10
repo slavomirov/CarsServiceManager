@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace CarsServiceManagerApi.Migrations
 {
     /// <inheritdoc />
-    public partial class DateOnly : Migration
+    public partial class AddDateOnly : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

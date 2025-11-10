@@ -8,6 +8,8 @@ public class User : IdentityUser
     public string LastName { get; set; }
     public string ServiceName { get; set; }
     public UserType Type { get; set; }
+
+    public virtual ICollection<EventAssignment> EventAssignments { get; set; } = new List<EventAssignment>();
 }
 
 public enum UserType
